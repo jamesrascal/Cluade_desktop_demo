@@ -1,3 +1,7 @@
+```
+This app is a demo app generated using Calude Code CLI as a demo for a video
+```
+
 # Flask Form Application
 
 A simple Flask web application with user authentication, form submission, and admin panel.
