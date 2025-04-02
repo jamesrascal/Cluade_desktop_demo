@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="jumbotron p-5 bg-light rounded-3">
+    <h1 class="display-4">Welcome to Flask Form App</h1>
+    <p class="lead">A simple Flask application with user authentication and form submission.</p>
+    <hr class="my-4">
+    {% if current_user.is_authenticated %}
+    <p>Submit a form by clicking the button below:</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('forms.submit') }}" role="button">Submit Form</a>
+    {% else %}
+    <p>Please login or register to submit forms.</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('auth.login') }}" role="button">Login</a>
+    <a class="btn btn-secondary btn-lg" href="{{ url_for('auth.register') }}" role="button">Register</a>
+    {% endif %}
+</div>
+{% endblock %}
